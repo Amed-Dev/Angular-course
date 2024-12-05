@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.nav_header {
+  background-color: #ddd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.content {
+  flex: 1;
+}
+.container_section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section_identifier {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #666;
+}
+.section_name {
+  text-transform: uppercase;
+}
+.footer_page {
+  background-color: #ccc;
+  text-align: center;
+  padding: 1rem;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+}
