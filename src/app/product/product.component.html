@@ -1,12 +1,11 @@
 <div class="container_section">
   <p class="section_identifier">
     <span class="section_name">product</span>
-
     works!
   </p>
 
   <div class="products_container">
-    <div class="product_card">
+    <div class="product_card" *ngFor="let product of products">
       <img
         src="https://fakeimg.pl/200x100?text=Product+image"
         alt="Descripción de la imagen"
@@ -14,58 +13,15 @@
       >
 
       <div class="card_content">
-        <h1 class="product_name">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="product_name">{{ product.name }}</h1>
 
         <p class="product_description">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis,
-        praesentium voluptas accusamus consequatur iusto quos.
+          {{ product.description }}
         </p>
 
-        <span class="product_price">S/.....</span>
+        <span class="product_price">{{ product.price }}</span>
 
-        <button class="see_product">Go to product</button>
-      </div>
-    </div>
-
-    <div class="product_card">
-      <img
-        src="https://fakeimg.pl/200x100?text=Product+image"
-        alt="Descripción de la imagen"
-        class="product_img"
-      >
-
-      <div class="card_content">
-        <h1 class="product_name">Lorem ipsum dolor sit amet.</h1>
-
-        <p class="product_description">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis,
-        praesentium voluptas accusamus consequatur iusto quos.
-        </p>
-
-        <span class="product_price">S/.....</span>
-
-        <button class="see_product">Go to product</button>
-      </div>
-    </div>
-
-    <div class="product_card">
-      <img
-        src="https://fakeimg.pl/200x100?text=Product+image"
-        alt="Descripción de la imagen"
-        class="product_img"
-      >
-
-      <div class="card_content">
-        <h1 class="product_name">Lorem ipsum dolor sit amet.</h1>
-
-        <p class="product_description">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis,
-        praesentium voluptas accusamus consequatur iusto quos.
-        </p>
-
-        <span class="product_price">S/.....</span>
-
-        <button class="see_product">Go to product</button>
+        <a class="see_product" [routerLink]="['/product', product.id]">Go to product</a>
       </div>
     </div>
   </div>

@@ -1,0 +1,64 @@
+<div class="container_section">
+  <div class="product_container" *ngIf="product">
+    <div class="product_image">
+      <div class="btn_back">
+        <a aria-label="Regresar a productos" [routerLink]="['/products']">
+          <i class="fa-solid fa-arrow-left-long"></i> Regresar
+        </a>
+      </div>
+      <img
+        src="https://fakeimg.pl/200x100?text=Product+image"
+        alt="Descripción del producto"
+      />
+    </div>
+    <div class="product_details">
+      <h1 class="product_name">{{ product.name }}</h1>
+      <div class="widget_details">
+        <div class="widget_details_product">
+          <p class="product_description">
+            {{ product.description }}
+          </p>
+          <div class="widget_vendor">
+            <div class="vendor">
+              Vendido por <a href="#">{{ product.vendor }}</a>
+            </div>
+            <div class="container">
+              <div class="option">
+                <img
+                  src="data:image/svg+xml;charset=utf8,%3Csvg%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2246%22%20height%3D%2246%22%20rx%3D%2223%22%20fill%3D%22%23DAFEE3%22%2F%3E%0A%20%20%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2246%22%20height%3D%2246%22%20rx%3D%2223%22%20stroke%3D%22%2341E770%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M30.5%2029.5C31.1193%2030.1193%2031.1193%2031.1207%2030.5%2031.74C29.8807%2032.3593%2028.8793%2032.3593%2028.26%2031.74C27.6407%2031.1207%2027.6407%2030.1193%2028.26%2029.5C28.8793%2028.8807%2029.8807%2028.8807%2030.5%2029.5Z%22%20stroke%3D%22%23116A2B%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M19.5%2029.5C20.1193%2030.1193%2020.1193%2031.1207%2019.5%2031.74C18.8807%2032.3593%2017.8793%2032.3593%2017.26%2031.74C16.6407%2031.1207%2016.6407%2030.1193%2017.26%2029.5C17.8793%2028.8807%2018.8807%2028.8807%2019.5%2029.5Z%22%20stroke%3D%22%23116A2B%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M22%2015H26C26.5523%2015%2027%2015.4477%2027%2016V26H14%22%20stroke%3D%22%23116A2B%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M17%2030.416H15C14.4477%2030.416%2014%2029.9683%2014%2029.416V24%22%20stroke%3D%22%23116A2B%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M27%2018H31.5C31.9188%2018%2032.293%2018.251%2032.4413%2018.6241L33.619%2022.2615C33.7167%2022.5093%2033.7679%2022.7733%2033.7679%2023.039V28.978C33.7679%2029.4587%2033.3906%2029.8753%2032.9166%2029.9757H31.6334%22%20stroke%3D%22%23116A2B%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M28%2030.42H20.5%22%20stroke%3D%22%23116A2B%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M34%2025H30V21H33.2083%22%20stroke%3D%22%23116A2B%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M14%2015H19%22%20stroke%3D%22%23116A2B%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M14%2018H17%22%20stroke%3D%22%23116A2B%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M15%2021H14%22%20stroke%3D%22%23116A2B%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                  alt="Despacho a domicilio"
+                />
+                <p>Despacho a domicilio</p>
+              </div>
+              <div class="option">
+                <img
+                  src="data:image/svg+xml;charset=utf8,%3Csvg%20width%3D%2249%22%20height%3D%2248%22%20viewBox%3D%220%200%2049%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%221.25%22%20y%3D%220.5%22%20width%3D%2247%22%20height%3D%2247%22%20rx%3D%2223.5%22%20fill%3D%22%23DAFEE3%22%2F%3E%0A%3Crect%20x%3D%221.25%22%20y%3D%220.5%22%20width%3D%2247%22%20height%3D%2247%22%20rx%3D%2223.5%22%20stroke%3D%22%2341E770%22%2F%3E%0A%3Cpath%20d%3D%22M26.75%2032H17.875C16.701%2032%2015.75%2031.049%2015.75%2029.875V19.855C15.75%2019.568%2015.808%2019.283%2015.921%2019.02L17.088%2016.29C17.422%2015.508%2018.191%2015%2019.042%2015H29.459C30.31%2015%2031.078%2015.508%2031.413%2016.29L32.58%2019.02C32.692%2019.284%2032.75%2019.568%2032.75%2019.855V24%22%20stroke%3D%22%23116A2B%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3Cpath%20d%3D%22M24.25%2015V19.44%22%20stroke%3D%22%23116A2B%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3Cpath%20d%3D%22M32.707%2019.4399H15.793%22%20stroke%3D%22%23116A2B%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3Cpath%20d%3D%22M18.75%2028H20.75%22%20stroke%3D%22%23116A2B%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3Cpath%20d%3D%22M29.75%2033C26.989%2033%2024.75%2030.761%2024.75%2028C24.75%2025.239%2026.989%2023%2029.75%2023C32.512%2023%2034.75%2025.239%2034.75%2028C34.75%2030.761%2032.512%2033%2029.75%2033%22%20stroke%3D%22%23116A2B%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3Cpath%20d%3D%22M31.694%2027.028L29.263%2029.459L27.804%2028%22%20stroke%3D%22%23116A2B%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E"
+                  alt="Retira tu compra"
+                />
+                <p>Retira tu compra</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="widget_buy">
+          <p class="product_price">{{ product.price }}</p>
+          <div class="product_quantity">
+            <label for="quantity">Cantidad:</label>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              min="1"
+              value="1"
+            />
+          </div>
+          <button class="buy_button">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!product">
+    <p>Product not found.</p>
+  </div>
+</div>
