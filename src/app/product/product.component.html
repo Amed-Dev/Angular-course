@@ -1,11 +1,41 @@
 <div class="container_section">
   <p class="section_identifier">
     <span class="section_name">product</span>
+
     works!
   </p>
 
+  <!-- Filtros -->
+
+  <div class="filters">
+    <div class="filters_label">
+      <span class="text_label">
+        Filter products by:
+        
+        <span *ngIf="category" class="category_badge yellow">{{this.category}}</span>
+      </span>
+    </div>
+
+    <button (click)="filterByCategory('Electronics')">Electronics</button>
+
+    <button (click)="filterByCategory('Clothing')">Clothing</button>
+
+    <button (click)="filterByCategory('Furniture')">Furniture</button>
+
+    <button (click)="filterByCategory('Accessories')">Accessories</button>
+
+    <button (click)="filterByCategory('Books')">Books</button>
+
+    <button (click)="clearFilters()">Clear Filters</button>
+  </div>
+
+  <!-- Lista de productos -->
+
   <div class="products_container">
-    <div class="product_card" *ngFor="let product of products">
+    <div
+      class="product_card"
+      *ngFor="let product of filteredProducts"
+    >
       <img
         src="https://fakeimg.pl/200x100?text=Product+image"
         alt="Descripción de la imagen"
@@ -15,14 +45,36 @@
       <div class="card_content">
         <h1 class="product_name">{{ product.name }}</h1>
 
-        <p class="product_description">
-          {{ product.description }}
-        </p>
+        <p class="product_description">{{ product.description }}</p>
 
         <span class="product_price">{{ product.price }}</span>
 
-        <a class="see_product" [routerLink]="['/product', product.id]">Go to product</a>
+        <a
+          class="see_product"
+          [routerLink]="['/product', product.id]"
+        >Go to product</a>
       </div>
     </div>
+  </div>
+
+  <!-- Paginación -->
+
+  <div class="pagination">
+    <a
+      (click)="previousPage()"
+      [class.disabled]="page === 1"
+    >&laquo;</a>
+
+    <a
+      *ngFor="let pageNumber of [].constructor(totalPages); let i = index"
+      [routerLink]="['/products']"
+      [queryParams]="{ page: i + 1 }"
+      [class.active]="i + 1 === page"
+    >{{i+1}}</a>
+
+    <a
+      (click)="nextPage()"
+      [class.disabled]="page === totalPages"
+    >&raquo;</a>
   </div>
 </div>
